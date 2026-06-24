@@ -4,8 +4,8 @@
       "id": 702504146250760273,
       "name": "Kaneki",
       "level": 25,
-      "xp": 2089,
-      "berrys": 3551,
+      "xp": 2236,
+      "berrys": 3915,
       "hp_max": 340,
       "hp": 340,
       "current_island": "Sabaody Archipelago",
@@ -34,13 +34,14 @@
         "Fruit du Démon (factice, à identifier)",
         "Sabre rouillé",
         "Bouteille de saké d'Wano",
-        "Fragment de Vivre Card"
+        "Fragment de Vivre Card",
+        "Fruit du Démon "
       ],
       "crew_id": "1",
       "wins": 19,
       "losses": 5,
       "last_explore": 0,
-      "cooldown_until": 1782261776,
+      "cooldown_until": 1782263281,
       "visited_islands": [
         "Wano Country",
         "Fish-Man Island",
@@ -62,17 +63,17 @@
         "Alabasta",
         "Sabaody Archipelago"
       ],
-      "devil_fruit": null,
+      "devil_fruit": "gomu_gomu",
       "devil_fruit_cooldown": 0,
-      "bosses_defeated": 0,
-      "bounty": 48250
+      "bosses_defeated": 500,
+      "bounty": 1298250
     },
     "748323867826585600": {
       "id": 748323867826585600,
       "name": "Rayto🪽",
       "level": 5,
-      "xp": 160,
-      "berrys": 2667,
+      "xp": 252,
+      "berrys": 2911,
       "hp_max": 140,
       "hp": 43,
       "current_island": "Arlong Park",
@@ -98,24 +99,24 @@
       "wins": 11,
       "losses": 2,
       "last_explore": 0,
-      "cooldown_until": 1782260956,
+      "cooldown_until": 1782263275,
       "visited_islands": [
         "Shells Town",
         "Arlong Park"
       ],
       "bounty": 6250,
-      "devil_fruit": null,
+      "devil_fruit": "hie_hie",
       "devil_fruit_cooldown": 0,
       "bosses_defeated": 0
     },
     "287954940553461760": {
       "id": 287954940553461760,
       "name": "Itix",
-      "level": 2,
-      "xp": 191,
-      "berrys": 1231,
-      "hp_max": 110,
-      "hp": 6,
+      "level": 3,
+      "xp": 7,
+      "berrys": 1245,
+      "hp_max": 120,
+      "hp": 120,
       "current_island": "Shells Town",
       "current_sea": "East Blue",
       "log_pose_set": true,
@@ -133,12 +134,15 @@
       "wins": 1,
       "losses": 0,
       "last_explore": 0,
-      "cooldown_until": 1782159066,
+      "cooldown_until": 1782263134,
       "visited_islands": [
         "Fuchsia Village",
         "Shells Town"
       ],
-      "bounty": 800
+      "bounty": 800,
+      "devil_fruit": null,
+      "devil_fruit_cooldown": 0,
+      "bosses_defeated": 0
     },
     "544228743992967198": {
       "id": 544228743992967198,

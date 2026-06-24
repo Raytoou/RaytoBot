@@ -1,0 +1,224 @@
+{
+  "players": {
+    "702504146250760273": {
+      "id": 702504146250760273,
+      "name": "Kaneki",
+      "level": 25,
+      "xp": 2089,
+      "berrys": 3551,
+      "hp_max": 340,
+      "hp": 340,
+      "current_island": "Sabaody Archipelago",
+      "current_sea": "Grand Line",
+      "log_pose_set": true,
+      "log_pose_destination": "Arlong Park",
+      "haki": {
+        "observation": true,
+        "armement": true,
+        "conquerant": true
+      },
+      "poneglyphs_found": [
+        "Alabasta",
+        "Laugh Tale",
+        "Wano Country",
+        "Whole Cake Island",
+        "Zou",
+        "Skypiea",
+        "Little Garden"
+      ],
+      "inventory": [
+        "Sabre rouillé",
+        "Carte au trésor déchirée",
+        "Fragment de Vivre Card",
+        "Sabre rouillé",
+        "Fruit du Démon (factice, à identifier)",
+        "Sabre rouillé",
+        "Bouteille de saké d'Wano",
+        "Fragment de Vivre Card"
+      ],
+      "crew_id": "1",
+      "wins": 19,
+      "losses": 5,
+      "last_explore": 0,
+      "cooldown_until": 1782261776,
+      "visited_islands": [
+        "Wano Country",
+        "Fish-Man Island",
+        "Punk Hazard",
+        "Whole Cake Island",
+        "Zou",
+        "Laugh Tale",
+        "Dressrosa",
+        "Shells Town",
+        "Skypiea",
+        "Thriller Bark",
+        "Marineford",
+        "Whisky Peak",
+        "Enies Lobby",
+        "Drum Island",
+        "Little Garden",
+        "Reverse Mountain",
+        "Water 7",
+        "Alabasta",
+        "Sabaody Archipelago"
+      ],
+      "devil_fruit": null,
+      "devil_fruit_cooldown": 0,
+      "bosses_defeated": 0,
+      "bounty": 48250
+    },
+    "748323867826585600": {
+      "id": 748323867826585600,
+      "name": "Rayto🪽",
+      "level": 5,
+      "xp": 160,
+      "berrys": 2667,
+      "hp_max": 140,
+      "hp": 43,
+      "current_island": "Arlong Park",
+      "current_sea": "East Blue",
+      "log_pose_set": false,
+      "log_pose_destination": null,
+      "haki": {
+        "observation": true,
+        "armement": false,
+        "conquerant": false
+      },
+      "poneglyphs_found": [],
+      "inventory": [
+        "Sabre rouillé",
+        "Bouteille de saké d'Wano",
+        "Fruit du Démon (factice, à identifier)",
+        "Sabre rouillé",
+        "Sabre rouillé",
+        "Bouteille de saké d'Wano",
+        "Sabre rouillé"
+      ],
+      "crew_id": "1",
+      "wins": 11,
+      "losses": 2,
+      "last_explore": 0,
+      "cooldown_until": 1782260956,
+      "visited_islands": [
+        "Shells Town",
+        "Arlong Park"
+      ],
+      "bounty": 6250,
+      "devil_fruit": null,
+      "devil_fruit_cooldown": 0,
+      "bosses_defeated": 0
+    },
+    "287954940553461760": {
+      "id": 287954940553461760,
+      "name": "Itix",
+      "level": 2,
+      "xp": 191,
+      "berrys": 1231,
+      "hp_max": 110,
+      "hp": 6,
+      "current_island": "Shells Town",
+      "current_sea": "East Blue",
+      "log_pose_set": true,
+      "log_pose_destination": "Arlong Park",
+      "haki": {
+        "observation": false,
+        "armement": false,
+        "conquerant": false
+      },
+      "poneglyphs_found": [],
+      "inventory": [
+        "Sabre rouillé"
+      ],
+      "crew_id": null,
+      "wins": 1,
+      "losses": 0,
+      "last_explore": 0,
+      "cooldown_until": 1782159066,
+      "visited_islands": [
+        "Fuchsia Village",
+        "Shells Town"
+      ],
+      "bounty": 800
+    },
+    "544228743992967198": {
+      "id": 544228743992967198,
+      "name": "Jiinnn",
+      "level": 3,
+      "xp": 76,
+      "berrys": 776,
+      "hp_max": 120,
+      "hp": 120,
+      "current_island": "Loguetown",
+      "current_sea": "East Blue",
+      "log_pose_set": false,
+      "log_pose_destination": null,
+      "haki": {
+        "observation": false,
+        "armement": false,
+        "conquerant": false
+      },
+      "poneglyphs_found": [],
+      "inventory": [
+        "Bouteille de saké d'Wano",
+        "Fragment de Vivre Card"
+      ],
+      "crew_id": "2",
+      "wins": 0,
+      "losses": 14,
+      "last_explore": 0,
+      "cooldown_until": 1782054139,
+      "bounty": 450
+    },
+    "420648319963103243": {
+      "id": 420648319963103243,
+      "name": "ChocoLune",
+      "level": 1,
+      "xp": 28,
+      "berrys": 524,
+      "hp_max": 100,
+      "hp": 40,
+      "current_island": "Fuchsia Village",
+      "current_sea": "East Blue",
+      "visited_islands": [
+        "Fuchsia Village"
+      ],
+      "log_pose_set": false,
+      "log_pose_destination": null,
+      "haki": {
+        "observation": false,
+        "armement": false,
+        "conquerant": false
+      },
+      "poneglyphs_found": [],
+      "inventory": [],
+      "crew_id": null,
+      "wins": 1,
+      "losses": 0,
+      "last_explore": 0,
+      "cooldown_until": 1782081456,
+      "bounty": 650
+    }
+  },
+  "crews": {
+    "1": {
+      "id": "1",
+      "name": "ELF",
+      "captain": 702504146250760273,
+      "members": [
+        702504146250760273,
+        748323867826585600
+      ],
+      "bounty_total": 0
+    },
+    "2": {
+      "id": "2",
+      "name": "Kirby",
+      "captain": 544228743992967198,
+      "members": [
+        544228743992967198
+      ],
+      "bounty_total": 0
+    }
+  },
+  "next_crew_id": 3
+}

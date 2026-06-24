@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 ffmpeg-*-full_build/
 .vscode/
+ids

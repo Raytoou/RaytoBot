@@ -185,6 +185,24 @@ class CombatView(discord.ui.View):
                         return
                     dmg = int(dmg * 1.4)
 
+                # Intangibilité Logia : une attaque normale traverse le corps
+                # d'un utilisateur de Logia. Seul le Haki de l'Armement ou un
+                # autre utilisateur Logia peut passer outre.
+                # Note : actor_nullified (Yami Yami) annule le bonus de Haki
+                # de l'attaquant mais ne lui donne pas la capacité de toucher un Logia.
+                if action == "attack" and fruits.is_logia(target):
+                    attacker_has_armement = actor["haki"]["armement"] and not actor_nullified
+                    attacker_is_logia = fruits.is_logia(actor)
+                    if not attacker_has_armement and not attacker_is_logia:
+                        self.last_log = (
+                            f"🌫️ L'attaque de {actor['name']} traverse le corps de "
+                            f"{target['name']} sans effet ! (Logia — utilise le Haki de l'Armement ou ta Frappe Haki)"
+                        )
+                        fruits.tick_cooldown(actor)
+                        self.turn = target_id
+                        await self.refresh(interaction)
+                        return
+
                 actor_frozen = self.frozen.get(actor_id, 0.0)
                 if actor_frozen:
                     dmg = int(dmg * (1 - actor_frozen))
@@ -196,7 +214,18 @@ class CombatView(discord.ui.View):
                 self.guaranteed_dodge_next[target_id] = False
 
                 if target_guaranteed_dodge or self.dodging.get(target_id) or dodge_roll < target_bonus["dodge_chance"]:
-                    self.last_log = f"💨 {target['name']} esquive l'attaque de {actor['name']} !"
+                    if target_guaranteed_dodge:
+                        fruit = fruits.get_fruit(target.get("devil_fruit"))
+                        fruit_name = fruit["name"] if fruit else "son Fruit"
+                        self.last_log = f"🌀 {target['name']} disparaît en un éclair grâce au **{fruit_name}** — l'attaque passe dans le vide !"
+                    elif self.dodging.get(target_id):
+                        self.last_log = f"🛡️ {target['name']} était en garde et dévie l'attaque de {actor['name']} !"
+                    elif fruits.is_logia(target):
+                        fruit = fruits.get_fruit(target.get("devil_fruit"))
+                        fruit_name = fruit["name"] if fruit else "son Fruit"
+                        self.last_log = f"🌫️ L'attaque de {actor['name']} traverse le corps de {target['name']} — le **{fruit_name}** le rend insaisissable !"
+                    else:
+                        self.last_log = f"💨 {target['name']} esquive l'attaque de {actor['name']} !"
                 else:
                     # Chance de KO instantané via Haki du Conquérant
                     actor_bonus = haki.total_combat_bonus(actor)

@@ -105,6 +105,13 @@ def get_player(user_id: int, name: str = "Pirate") -> dict:
         player["devil_fruit"] = None
         player["devil_fruit_cooldown"] = 0
         migrated = True
+    elif isinstance(player["devil_fruit"], str):
+        # Nettoyage : supprime les espaces ou crochets parasites qui peuvent
+        # venir d'une édition manuelle du JSON (ex: "mera_mera " ou "devil_fruit[mera_mera]")
+        cleaned = player["devil_fruit"].strip().strip("[]").removeprefix("devil_fruit:")
+        if cleaned != player["devil_fruit"]:
+            player["devil_fruit"] = cleaned
+            migrated = True
     if "bosses_defeated" not in player:
         player["bosses_defeated"] = 0
         migrated = True

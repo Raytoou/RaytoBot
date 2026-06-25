@@ -256,22 +256,24 @@ class PveCombatView(discord.ui.View):
                 return
 
     async def _enemy_turn_and_refresh(self, interaction: discord.Interaction):
-        """Joue le tour de l'ennemi (action déjà déterminée si Observation
-        active, sinon tirée maintenant), puis rafraîchit l'affichage."""
-        # Le cooldown du Fruit du Démon du joueur diminue à chaque tour qu'il joue
+        """Joue le tour de l'ennemi, puis rafraîchit l'affichage."""
         fruits.tick_cooldown(self.player)
 
         enemy_action = self.next_enemy_action if self.observation_available else enemies.enemy_choose_action()
 
         bonus = haki.total_combat_bonus(self.player)
-        dodge_roll = random.random()
-        dodged = self.player_dodging or dodge_roll < bonus["dodge_chance"]
+        was_dodging = self.player_dodging  # mémoriser avant remise à zéro
         self.player_dodging = False
+        dodge_roll = random.random()
+        dodged = was_dodging or dodge_roll < bonus["dodge_chance"]
 
         if enemy_action == "guard":
             self.last_log += f"\n🛡️ {self.enemy['name']} se met en garde."
         elif dodged:
-            self.last_log += f"\n💨 {self.player['name']} esquive l'attaque de {self.enemy['name']} !"
+            if was_dodging:
+                self.last_log += f"\n🛡️ {self.player['name']} était en garde et dévie l'attaque de {self.enemy['name']} !"
+            else:
+                self.last_log += f"\n💨 {self.player['name']} esquive l'attaque de {self.enemy['name']} !"
         else:
             is_heavy = enemy_action == "heavy_attack"
             dmg = random.randint(self.enemy["dmg_min"], self.enemy["dmg_max"])
@@ -280,9 +282,19 @@ class PveCombatView(discord.ui.View):
             if self.enemy_frozen:
                 dmg = int(dmg * (1 - self.enemy_frozen))
                 self.enemy_frozen = 0.0
+
+            # Intangibilité Logia : les ennemis PNJ n'ont pas de Haki,
+            # leurs attaques sont réduites de 40% mais pas annulées (risque conservé en PvE)
+            logia_note = ""
+            if fruits.is_logia(self.player):
+                dmg = int(dmg * 0.6)
+                fruit = fruits.get_fruit(self.player.get("devil_fruit", ""))
+                fruit_name = fruit["name"] if fruit else "son Fruit"
+                logia_note = f" *(le **{fruit_name}** absorbe une partie du coup)*"
+
             self.player_hp = max(0, self.player_hp - dmg)
             verb = "frappe lourdement" if is_heavy else "attaque"
-            self.last_log += f"\n💢 {self.enemy['name']} {verb} {self.player['name']} pour {dmg} dégâts !"
+            self.last_log += f"\n💢 {self.enemy['name']} {verb} {self.player['name']} pour {dmg} dégâts !{logia_note}"
 
         if self.player_hp <= 0:
             await self.end_combat(interaction, victory=False)

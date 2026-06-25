@@ -196,6 +196,16 @@ def tick_cooldown(player: dict):
         player["devil_fruit_cooldown"] -= 1
 
 
+def is_logia(player: dict) -> bool:
+    """Vérifie si le joueur a un Fruit de type Logia actif (corps intangible)."""
+    key = player.get("devil_fruit")
+    if not key:
+        return False
+    key = key.strip()  # protège contre les espaces parasites dans le JSON
+    fruit = get_fruit(key)
+    return fruit is not None and fruit.get("category") == "Logia"
+
+
 def fruit_summary(player: dict) -> str:
     key = player.get("devil_fruit")
     if not key:

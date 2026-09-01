@@ -4,8 +4,8 @@
       "id": 702504146250760273,
       "name": "Kaneki",
       "level": 25,
-      "xp": 2325,
-      "berrys": 4133,
+      "xp": 2473,
+      "berrys": 4415,
       "hp_max": 340,
       "hp": 340,
       "current_island": "Sabaody Archipelago",
@@ -35,13 +35,14 @@
         "Sabre rouillé",
         "Bouteille de saké d'Wano",
         "Fragment de Vivre Card",
-        "Fruit du Démon "
+        "Fruit du Démon ",
+        "Sabre rouillé"
       ],
       "crew_id": "1",
       "wins": 19,
       "losses": 5,
       "last_explore": 0,
-      "cooldown_until": 1782385740,
+      "cooldown_until": 1782485107,
       "visited_islands": [
         "Wano Country",
         "Fish-Man Island",
@@ -72,8 +73,8 @@
       "id": 748323867826585600,
       "name": "Rayto🪽",
       "level": 5,
-      "xp": 318,
-      "berrys": 3009,
+      "xp": 400,
+      "berrys": 3229,
       "hp_max": 140,
       "hp": 43,
       "current_island": "Arlong Park",
@@ -99,7 +100,7 @@
       "wins": 11,
       "losses": 2,
       "last_explore": 0,
-      "cooldown_until": 1782331970,
+      "cooldown_until": 1782478275,
       "visited_islands": [
         "Shells Town",
         "Arlong Park"
@@ -113,8 +114,8 @@
       "id": 287954940553461760,
       "name": "Itix",
       "level": 3,
-      "xp": 7,
-      "berrys": 1245,
+      "xp": 70,
+      "berrys": 1357,
       "hp_max": 120,
       "hp": 120,
       "current_island": "Shells Town",
@@ -128,13 +129,14 @@
       },
       "poneglyphs_found": [],
       "inventory": [
-        "Sabre rouillé"
+        "Sabre rouillé",
+        "Fruit du Démon "
       ],
       "crew_id": null,
       "wins": 1,
       "losses": 0,
       "last_explore": 0,
-      "cooldown_until": 1782263134,
+      "cooldown_until": 1782400359,
       "visited_islands": [
         "Fuchsia Village",
         "Shells Town"
